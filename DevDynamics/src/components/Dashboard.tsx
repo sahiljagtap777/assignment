@@ -16,14 +16,14 @@ const Dashboard: React.FC = () => {
         ...developer,
         totalActivity: developer.totalActivity.map((activity) => ({
           ...activity,
-          value: parseInt(activity.value, 10), // Convert value to number
+          value: activity.value, // Convert value to number
         })),
         dayWiseActivity: developer.dayWiseActivity.map((day) => ({
           ...day,
           items: {
             children: day.items.children.map((item) => ({
               ...item,
-              count: parseInt(item.count, 10), // Convert count to number
+              count: item.count, // Convert count to number
             }))
           }
         }))
